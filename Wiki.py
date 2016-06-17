@@ -32,10 +32,10 @@ def get_wiki(text,mic):
 
 
 def isValid(text):
-    wiki= bool(re.search(r'\Wiki\b',text, re.IGNORECASE))
+    wiki= bool(re.search(r'\bWiki\b',text, re.IGNORECASE))
     # Add 'Wicky' because the STT engine recognizes it quite often
-    wicky= bool(re.search(r'\wicky\b',text, re.IGNORECASE))
-    article= bool(re.search(r'\article\b',text, re.IGNORECASE))
+    wicky= bool(re.search(r'\bwicky\b',text, re.IGNORECASE))
+    article= bool(re.search(r'\barticle\b',text, re.IGNORECASE))
 
     if wicky or wiki or article:
         return True
